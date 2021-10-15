@@ -1,7 +1,8 @@
 # Traffic Sim
 
-![UI Screenshot](#https://github.com/phi12ip/TrafficSim/blob/c757522cfb483db90633373bafb649527774e8e0/ui-screenshot.png)
+![UI Screenshot]()
 
+<img src="https://github.com/phi12ip/TrafficSim/blob/c757522cfb483db90633373bafb649527774e8e0/ui-screenshot.png" alt="UI Screenshot>
 **Prerequisites**
 
 Make sure you have java installed on your computer with version Java SE 11 
