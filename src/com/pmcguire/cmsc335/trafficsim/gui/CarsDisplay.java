@@ -29,7 +29,7 @@ public class CarsDisplay extends JPanel
         setMinimumSize(new Dimension(100, 100));
 
         // Add Main Label
-        JLabel mainLabel = new JLabel("Cars\n----");
+        JLabel mainLabel = new JLabel("Cars\n");
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         add(mainLabel);
     }
