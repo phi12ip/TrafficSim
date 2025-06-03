@@ -3,8 +3,6 @@ package com.andisolsoftware.trafficsim.gui;
 import com.andisolsoftware.trafficsim.Simulator;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 public class MenuBar extends JMenuBar
