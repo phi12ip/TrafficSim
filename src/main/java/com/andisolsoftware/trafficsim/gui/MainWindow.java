@@ -12,7 +12,6 @@ import com.andisolsoftware.trafficsim.timer.ClockTimer;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.TimerTask;
 
 public class MainWindow extends JFrame
 {
