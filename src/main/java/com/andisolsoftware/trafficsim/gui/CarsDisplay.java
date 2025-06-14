@@ -7,7 +7,7 @@ Class:      UMGC CMSC-335
 Project:    3
  */
 
-import com.andisolsoftware.trafficsim.Car;
+import com.andisolsoftware.trafficsim.car.Car;
 
 import javax.swing.*;
 import java.awt.*;

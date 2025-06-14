@@ -7,6 +7,7 @@ Class:      UMGC CMSC-335
 Project:    3
  */
 
+import com.andisolsoftware.trafficsim.car.Car;
 import com.andisolsoftware.trafficsim.gui.CarsDisplay;
 import com.andisolsoftware.trafficsim.gui.LightsDisplay;
 import com.andisolsoftware.trafficsim.intersection.OneRoadIntersection;

@@ -1,4 +1,4 @@
-package com.andisolsoftware.trafficsim;
+package com.andisolsoftware.trafficsim.car;
 
 /*
 Author:     Philip McGuire
@@ -7,6 +7,7 @@ Class:      UMGC CMSC-335
 Project:    3
  */
 
+import com.andisolsoftware.trafficsim.MapLocation;
 import com.andisolsoftware.trafficsim.timer.TickListener;
 
 import javax.swing.*;
@@ -22,7 +23,7 @@ public class Car implements TickListener, Runnable
     private final String name;                              // the car's name
     private ArrayList<Point> obstacles;                     // obstacles on the same road as the car
     private double speed;                                   // speed in meters per second ( 40 mph = 17.88m/s )
-    private final Point location = new Point();
+    private final MapLocation location = new MapLocation();
 
     public Thread thread;                                   // thread the car is run on
 
@@ -140,7 +141,7 @@ public class Car implements TickListener, Runnable
      */
     public synchronized Point getLocation()
     {
-        return location.getLocation();
+        return location.getPoint();
     }
 
     /**
@@ -150,7 +151,7 @@ public class Car implements TickListener, Runnable
      */
     public synchronized void setLocation(Point p)
     {
-        location.setLocation(p);
+        location.setPoint(p);
     }
 
     /**

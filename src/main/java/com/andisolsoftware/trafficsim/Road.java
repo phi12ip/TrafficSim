@@ -7,6 +7,7 @@ Class:      UMGC CMSC-335
 Project:    3
  */
 
+import com.andisolsoftware.trafficsim.car.Car;
 import com.andisolsoftware.trafficsim.light.Light;
 import com.andisolsoftware.trafficsim.light.State;
 import com.andisolsoftware.trafficsim.timer.TickListener;
