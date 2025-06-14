@@ -16,13 +16,16 @@ import java.util.ArrayList;
 /**
  * Car
  */
-public class Car extends Point implements TickListener, Runnable
+public class Car implements TickListener, Runnable
 {
 
     private final String name;                              // the car's name
     private ArrayList<Point> obstacles;                     // obstacles on the same road as the car
     private double speed;                                   // speed in meters per second ( 40 mph = 17.88m/s )
+    private final Point location = new Point();
+
     public Thread thread;                                   // thread the car is run on
+
 
     private final int DEFAULT_TICK_INTERVAL = 1000;         // how long each tick is in ms
     private JTextArea GUITextArea;                          // text area output in the GUI
@@ -89,14 +92,14 @@ public class Car extends Point implements TickListener, Runnable
     {
         // Calculate where I want to go
         double tickDistanceTraveled = (speed * DEFAULT_TICK_INTERVAL / 1000);
-        Point newPosition = new Point((int) (getX() + tickDistanceTraveled), (int) getY());
+        Point newPosition = new Point((int) (location.getX() + tickDistanceTraveled), (int) location.getY());
 
         // For each obstacle, determine if:
         for (Point obstacle : obstacles)
         {
             // (it is between where I am) && (where I want to go)
             double x = obstacle.getX();
-            if (x > getX())
+            if (x > location.getX())
             {
                 if ((x - 5) <= newPosition.getX())
                 {
@@ -135,10 +138,9 @@ public class Car extends Point implements TickListener, Runnable
      *
      * @return the location
      */
-    @Override
     public synchronized Point getLocation()
     {
-        return super.getLocation();
+        return location.getLocation();
     }
 
     /**
@@ -146,10 +148,9 @@ public class Car extends Point implements TickListener, Runnable
      *
      * @param p location
      */
-    @Override
     public synchronized void setLocation(Point p)
     {
-        super.setLocation(p);
+        location.setLocation(p);
     }
 
     /**
@@ -177,8 +178,8 @@ public class Car extends Point implements TickListener, Runnable
         return String.format(
                 "Car { name='%s', x=%d, y=%d }",
                 getName(),
-                (int) getX(),
-                (int) getY()
+                (int) location.getX(),
+                (int) location.getY()
         );
     }
 

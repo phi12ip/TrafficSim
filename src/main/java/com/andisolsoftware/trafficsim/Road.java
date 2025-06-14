@@ -167,7 +167,7 @@ public class Road implements TickListener, Runnable
         // Add each car to obstacles
         for (Car car : cars)
         {
-            obstacles.add((Point) car.clone());
+            obstacles.add(car.getLocation());
         }
 
         // Add each light to obstacles if it is red
